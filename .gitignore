@@ -1,1 +1,7 @@
-.vscode
+# ignore everything
+/*
+
+# except these
+!.gitignore
+!README.md
+!public/

@@ -5,4 +5,5 @@
 !.gitignore
 !.nojekyll
 !public/
-!404.html
+!CNAME
+!.github/workflow/*.yml

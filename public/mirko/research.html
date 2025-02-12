@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+  Hello there!
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Mirko Nava">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Making robots understand the world using Deep Learning. I'm an AI researcher passionate about Self-supervised Learning and Computer Vision for mobile robots.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mirko Nava">
+  <meta property="og:site_name" content="Mirko Nava">
+  <meta property="og:url" content="https://mirko.nava.website">
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="https://mirko.nava.website/res/img/mirko_logotype.png">
+  <meta property="og:description" content="Making robots understand the world using Deep Learning. I'm an AI researcher passionate about Self-supervised Learning and Computer Vision for mobile robots.">
+  <title>Mirko Nava | Research</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:100,400,700,900">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Readex+Pro:100,400,700,900">
+  <link rel="stylesheet" href="style/style.css">
+  <script>
+    const _bibtex_entries = {
+      carlotti2024learning: `@inproceedings{carlotti2024learning,
+  title={Learning to Estimate the Pose of a Peer Robot in a Camera Image by Predicting the States of its LEDs},
+  author={Carlotti, Nicholas and Nava, Mirko and Giusti, Alessandro},
+  booktitle={{IEEE/RSJ} International Conference on Intelligent Robots and Systems},
+  pages={2763--2769},
+  year={2024},
+}`,
+      carlotti2024multi: `@article{carlotti2024multi,
+  title={Multi-LED Classification as Pretext For Robot Heading Estimation},
+  author={Carlotti, Nicholas and Nava, Mirko and Giusti, Alessandro},
+  journal={{IEEE} ICRA @ 40, poster session},
+  year={2024},
+}`,
+      carlotti2024real: `@inproceedings{carlotti2024real,
+  title={Real-Time Fully Convolutional Networks for Peer-to-Peer Nano-drone Visual Localization and LED State Estimation},
+  author={Carlotti, Nicholas and Nava, Mirko and Giusti, Alessandro},
+  booktitle={{Springer} European Robotics Forum},
+  pages={310--314},
+  year={2024},
+}`,
+      cereda2024vision: `@article{cereda2024vision,
+  title={Vision-state Fusion: Improving Deep Neural Networks for Autonomous Robotics},
+  author={Cereda, Elia and Bonato, Stefano and Nava, Mirko and Giusti, Alessandro and Palossi, Daniele},
+  journal={{Springer} Journal of Intelligent \& Robotic Systems},
+  volume={110},
+  number={2},
+  pages={1--13},
+  year={2024},
+}`,
+      nava2024self: `@article{nava2024self,
+  title={Self-Supervised Learning of Visual Robot Localization Using LED State Prediction as a Pretext Task},
+  author={Nava, Mirko and Carlotti, Nicholas and Crupi, Luca and Palossi, Daniele and Giusti, Alessandro},
+  journal={{IEEE} Robotics and Automation Letters},
+  volume={9},
+  number={4},
+  pages={3363--3370},
+  year={2024},
+}`,
+      nava2023self: `@article{nava2023self,
+  title={Self-supervised robot learning for spatial perception},
+  author={Nava, Mirko},
+  school={Universitá della Svizzera italiana (USI)}
+  year={2023},
+}`,
+      paolillo2022visual: `@inproceedings{paolillo2022visual,
+  title={Visual servoing with geometrically interpretable neural perception},
+  author={Paolillo, Antonio and Nava, Mirko and Piga, Dario and Giusti, Alessandro},
+  booktitle={{IEEE/RSJ} International Conference on Intelligent Robots and Systems},
+  pages={5300--5306},
+  year={2022},
+}`,
+      nava2022learning: `@article{nava2022learning,
+  title={Learning visual localization of a quadrotor using its noise as self-supervision},
+  author={Nava, Mirko and Paolillo, Antonio and Guzzi, J{\'e}r{\^o}me and Gambardella, Luca Maria and Giusti, Alessandro},
+  journal={{IEEE} Robotics and Automation Letters},
+  volume={7},
+  number={2},
+  pages={2218--2225},
+  year={2022},
+}`,
+      nava2021uncertainty: `@article{nava2021uncertainty,
+  title={Uncertainty-aware self-supervised learning of spatial perception tasks},
+  author={Nava, Mirko and Paolillo, Antonio and Guzzi, J{\'e}r{\^o}me and Gambardella, Luca Maria and Giusti, Alessandro},
+  journal={{IEEE} Robotics and Automation Letters},
+  volume={6},
+  number={4},
+  pages={6693--6700},
+  year={2021},
+}`,
+      nava2021state: `@article{nava2021state,
+  title={State-consistency loss for learning spatial perception tasks from partial labels},
+  author={Nava, Mirko and Gambardella, Luca Maria and Giusti, Alessandro},
+  journal={{IEEE} Robotics and Automation Letters},
+  volume={6},
+  number={2},
+  pages={1112--1119},
+  year={2021},
+}`,
+      rottondi2021benefits: `@article{rottondi2021benefits,
+  title={On the benefits of domain adaptation techniques for quality of transmission estimation in optical networks},
+  author={Rottondi, Cristina and Di Marino, Riccardo and Nava, Mirko and Giusti, Alessandro and Bianco, Andrea},
+  journal={{Optica Publishing Group} Journal of Optical Communications and Networking},
+  volume={13},
+  number={1},
+  pages={34--43},
+  year={2021},
+}`,
+      guzzi2020path: `@article{guzzi2020path,
+  title={Path planning with local motion estimations},
+  author={Guzzi, J{\'e}r{\^o}me and Chavez-Garcia, R Omar and Nava, Mirko and Gambardella, Luca Maria and Giusti, Alessandro},
+  journal={{IEEE} Robotics and Automation Letters},
+  volume={5},
+  number={2},
+  pages={2586--2593},
+  year={2020},
+}`,
+      nava2019learning: `@article{nava2019learning,
+  title={Learning long-range perception using self-supervision from short-range sensors and odometry},
+  author={Nava, Mirko and Guzzi, Jerome and Chavez-Garcia, R Omar and Gambardella, Luca M and Giusti, Alessandro},
+  journal={{IEEE} Robotics and Automation Letters},
+  volume={4},
+  number={2},
+  pages={1279--1286},
+  year={2019},
+}`,
+      nava2019demo: `@inproceedings{nava2019learning,
+  title={learning to perceive long-range obstacles using self-supervision from short-range sensors},
+  author={Nava, Mirko and Guzzi, J{\'e}r{\^o}me and Chavez-Garcia, R Omar and Gambardella, Luca M and Giusti, Alessandro},
+  booktitle={{AAAI} Conference on Artificial Intelligence, demo track},
+  volume={33},
+  number={01},
+  pages={9867--9868},
+  year={2019},
+}`,
+    }
+
+    function copy_bibtex(e) {
+      var ref = e.parentElement.parentElement.dataset.ref || "none";
+      if (ref in _bibtex_entries) {
+        navigator.clipboard.writeText(_bibtex_entries[ref]);
+      }
+    }
+
+    function update_pxin1rem() {
+      const pxin1rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      document.documentElement.style.setProperty('--vw-js', window.innerWidth / pxin1rem);
+      document.documentElement.style.setProperty('--vh-js', window.innerHeight / pxin1rem);
+    }
+
+    // define unitless viewport for responsive styling
+    addEventListener('resize', update_pxin1rem);
+    addEventListener('DOMContentLoaded', update_pxin1rem);
+  </script>
+  <!-- <script src="script/tex-mml-chtml.js" id="MathJax-script" defer></script> -->
+</head>
+
+<body>
+  <header id="home">
+    <div>
+      <a href="/">
+        <h1 style="font-size: calc(2rem + 2vw);">Mirko Nava</h1>
+      </a>
+      <label id="hamburger">
+        <div></div>
+        <input type="checkbox">
+        <div></div>
+      </label>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#news">News</a></li>
+          <li><a href="#connect">Connect</a></li>
+          <!-- <li><button id="toggle_theme">Theme</button></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article id="publications">
+      <div>
+        <header>
+          <a href="#publications">
+            <h2>Publications</h2>
+          </a>
+        </header>
+        <section data-ref="carlotti2024learning">
+          <h5>Learning to Estimate the Pose of a Peer Robot in a Camera Image by Predicting the States of its
+            LEDs</h5>
+          <p><i>Nicholas Carlotti, Mirko Nava, and Alessandro Giusti.</i></p>
+          <p>IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 2763-2769, 2024.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/IROS58592.2024.10801959"
+              title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="carlotti2024multi">
+          <h5>Multi-LED Classification as Pretext For Robot Heading Estimation</h5>
+          <p><i>Nicholas Carlotti, Mirko Nava, and Alessandro Giusti.</i></p>
+          <p>IEEE ICRA@40, 2024.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.48550/arXiv.2410.04536" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="carlotti2024real">
+          <h5>Real-time Fully Convolutional Networks</h5>
+          <p><i>Nicholas Carlotti, Mirko Nava, and Alessandro Giusti.</i></p>
+          <p>Springer Nature European Robotics Forum, vol. 1, pp. 310-314, 2024.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1007/978-3-031-76424-0_55" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="cereda2024vision">
+          <h5>Vision-state Fusion: Improving Deep Neural Networks for Autonomous Robotics</h5>
+          <p><i>Elia Cereda, Stefano Bonato, Mirko Nava, Alessandro Giusti, and Daniele Palossi.</i></p>
+          <p>Journal of Intelligent & Robotic Systems, vol. 110, 2024.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1007/s10846-024-02091-6" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2024self">
+          <h5>Self-Supervised Learning of Visual Robot Localization Using LED State Prediction as a Pretext
+            Task</h5>
+          <p><i>Mirko Nava, Nicholas Carlotti, Luca Crupi, Daniele Palossi, and Alessandro Giusti.</i></p>
+          <p>IEEE Robotics and Automation Letters, vol. 9, pp. 3363-3370, 2024.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/LRA.2024.3365973" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2023self">
+          <h5>Self-Supervised Robot Learning for Spatial Perception</h5>
+          <p><i>Mirko Nava.</i></p>
+          <p>Doctoral Dissertation, Università della Svizzera italiana, 2023.</p>
+          <div>
+            <a target="_blank" href="https://susi.usi.ch/usi/documents/327660" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="paolillo2022visual">
+          <h5>Visual Servoing With Geometrically Interpretable Neural Perception</h5>
+          <p><i>Antonio Paolillo, Mirko Nava, Dario Piga, and Alessandro Giusti.</i></p>
+          <p>IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 5300-5306, 2022.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/IROS47612.2022.9982163"
+              title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2022learning">
+          <h5>Learning Visual Localization of a Quadrotor Using its Noise as Self-Supervision</h5>
+          <p><i>Mirko Nava, Antonio Paolillo, Jérôme Guzzi, Luca Maria Gambardella, and Alessandro Giusti.</i></p>
+          <p>IEEE Robotics and Automation Letters, vol. 7, pp. 2218-2225, 2022.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/LRA.2022.3143565" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2021uncertainty">
+          <h5>Uncertainty-aware Self-Supervised Learning of Spatial Perception Tasks</h5>
+          <p><i>Mirko Nava, Antonio Paolillo, Jérôme Guzzi, Luca Maria Gambardella, and Alessandro Giusti.</i></p>
+          <p>IEEE Robotics and Automation Letters, vol. 6, pp. 6693-6700, 2021.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/LRA.2021.3095269" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2021state">
+          <h5>State-consistency Loss for Learning Spatial Perception Tasks From Partial Labels</h5>
+          <p><i>Mirko Nava, Luca Maria Gambardella, and Alessandro Giusti.</i></p>
+          <p>IEEE Robotics and Automation Letters, vol. 6, pp. 1112-1119, 2021.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/LRA.2021.3056378" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="rottondi2021benefits">
+          <h5>On the Benefits of Domain Adaptation Techniques for Quality of Transmission Estimation in
+            Optical Networks</h5>
+          <p><i>Cristina Rottondi, Riccardo Di Marino, Mirko Nava, Alessandro Giusti, and Andrea Bianco.</i></p>
+          <p>Journal of Optical Communications and Networking, vol. 13, pp. 34-43, 2021.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1364/JOCN.401915" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="guzzi2020path">
+          <h5>Path Planning With Local Motion Estimations</h5>
+          <p><i>Jérôme Guzzi, Ricardo Omar Chavez-Garcia, Mirko Nava, Luca Maria Gambardella, and Alessandro
+              Giusti.</i></p>
+          <p>IEEE Robotics and Automation Letters, vol. 5, pp. 2586-2593, 2020.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/LRA.2020.2972849" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2019learning">
+          <h5>Learning Long-range Perception Using Self-Supervision From Short-range Sensors and Odometry</h5>
+          <p><i>Mirko Nava, Jérôme Guzzi, Ricardo Omar Chavez-Garcia, Luca Maria Gambardella, and Alessandro
+              Giusti.</i></p>
+          <p>IEEE Robotics and Automation Letters, vol. 4, pp. 1279-1286, 2019.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1109/LRA.2019.2894849" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+        <section data-ref="nava2019demo">
+          <h5>Learning to Perceive Long-range Obstacles Using Self-Supervision From Short-range Sensors</h5>
+          <p><i>Mirko Nava, Jérôme Guzzi, Ricardo Omar Chavez-Garcia, Luca Maria Gambardella, and Alessandro
+              Giusti.</i></p>
+          <p>AAAI Conference on Artificial Intelligence, pp. 9867-9868, 2019.</p>
+          <div>
+            <a target="_blank" href="https://doi.org/10.1609/aaai.v33i01.33019867" title="Open article">&UpperRightArrow;</a>
+            <a onclick="copy_bibtex(this)" title="Clik to copy bibtex">&#128457;</a>
+          </div>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div>
+      <div id="connect">
+        <h1 style="font-size: 2.5rem;">Mirko Nava</h1>
+        <p></p>
+        <div>
+          <a href="https://www.linkedin.com/in/mirko-nava/" title="Mirko's linkedin page" target="_blank">
+            <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+              style="aspect-ratio: 1 / 1; width: 2rem;">
+              <path fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+            </svg>
+          </a>
+          <a href="https://github.com/mirko-nava" title="Mirko's github page" target="_blank">
+            <svg class="github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443 512"
+              style="aspect-ratio: 1 / 1; width: 2rem;">
+              <path fill="currentColor" d="M317.951,480.035v-88.452c0-30.086-10.555-49.694-22.104-59.686C367.611,323.92,443,296.656,443,172.855
+                      c0-35.188-12.489-63.957-33.169-86.519c3.329-8.112,14.368-40.909-3.17-85.311c0,0-27.018-8.648-88.549,33.038
+                      c-25.756-7.145-53.338-10.717-80.733-10.852c-27.395,0.134-54.951,3.707-80.653,10.852C95.141-7.623,68.069,1.025,68.069,1.025
+                      c-17.51,44.375-6.472,77.171-3.142,85.311c-20.599,22.562-33.195,51.304-33.195,86.519c0,123.479,75.255,151.119,146.829,159.311
+                      c-9.239,8.032-17.591,22.267-20.466,43.085c-18.397,8.246-65.049,22.482-93.785-26.781c0,0-17.029-30.971-49.392-33.227
+                      c0,0-31.477-0.43-2.229,19.582c0,0,21.138,9.912,35.801,47.167c0,0,18.666,57.537,108.317,38.035v60.007
+                      c0,8.487-21.299,31.965-21.299,31.965h203.957C339.465,512,317.951,488.605,317.951,480.035z" />
+            </svg>
+          </a>
+          <a href="https://scholar.google.com/citations?user=baTfv5MAAAAJ&hl=en" title="Mirko's google scholar page"
+            target="_blank">
+            <svg class="scholar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+              style="aspect-ratio: 1 / 1; width: 2rem;">
+              <path fill="currentColor" style="opacity:0.5"
+                d="M256,212c60.664,0,112.912,36.014,136.542,87.826L512,202.879L256,0.925L0,202.878l119.484,96.892 C143.126,247.989,195.358,212,256,212z" />
+              <circle fill="currentColor" cx="256" cy="362" r="150" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      <nav>
+        <!-- <h4>Research</h4>
+        <ul>
+          <li><a href="#project1todo">Self-Supervised Learning</a></li>
+          <li><a href="#project2todo">Pose Estimation</a></li>
+          <li><a href="#project3todo">State Consistency</a></li>
+        </ul> -->
+      </nav>
+      <address>
+        <h4>Get in touch</h4>
+        <div>
+          <svg class="location" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+            style="aspect-ratio: 1 / 1; width: 1rem;">
+            <path fill="currentColor"
+              d="M384 192c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192z" />
+          </svg>
+          <span class="location">Based in Switzerland 🇨🇭</span>
+
+          <!-- <svg class="phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+            style="aspect-ratio: 1 / 1; width: 1rem;">
+            <path fill="currentColor"
+              d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
+          </svg>
+          <span class="phone">+41 123 456 789</span> -->
+
+          <svg class="mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+            style="aspect-ratio: 1 / 1; width: 1rem;">
+            <path fill="currentColor"
+              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+          </svg>
+          <span class="mail"><a href="mailto:mirknav@gmail.com">mirknav@gmail.com</a></span>
+
+          <!-- <svg class="curriculum" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
+            style="aspect-ratio: 1 / 1; width: 1rem;">
+            <path fill="currentColor"
+              d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 288c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128z" />
+          </svg>
+          <span class="curriculum"><a href="res/cv_todo/mirko_nava_cv.pdf" download>CV / Resume</a></span> -->
+        </div>
+      </address>
+    </div>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="#home">Research</a>
+          <li><a href="/#news">News</a>
+        </ul>
+      </nav>
+      <span>&#169; 2025 <a href="https://mirko.nava.website" target="_blank">Mirko Nava</a></span>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -310,6 +310,8 @@ body > header > div > label#hamburger:has(input:checked) + nav {
 }
 body > header > div > nav {
   grid-column: 3;
+  padding: 0.4rem 0.8rem;
+  background-color: var(--bg-color-70);
 }
 body > header > div > nav > ul > a, body > header > div > nav > ul > button {
   font-family: var(--font-family-head);

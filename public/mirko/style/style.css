@@ -339,6 +339,12 @@ article#hero {
   background-blend-mode: normal, screen, color-dodge, overlay, difference;
   background-image: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color-70) 100%), radial-gradient(50% 120% at 50% 50%, #ba489e 0%, #430135 100%), linear-gradient(100deg, #e9e9e9 0%, #FF0000 100%), linear-gradient(360deg, #0029FF 0%, #8FFF00 100%), radial-gradient(100% 160% at 100% 100%, #eb00ff 0%, #0bbe48 100%);
 }
+@media only screen and (max-width: 30rem) {
+  article#hero {
+    --max-viewport: 30rem;
+    min-height: 50vh;
+  }
+}
 article#hero > div {
   justify-items: start;
   background-color: unset;
